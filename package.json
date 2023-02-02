@@ -1,0 +1,20 @@
+{
+  "name": "gitbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "test": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^1.9.8",
+    "watchpack": "^1.6.1"
+  },
+  "dependencies": {
+    "vue-template-compiler": "^2.7.14"
+  }
+}
