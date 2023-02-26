@@ -1,10 +1,9 @@
 module.exports = [
     {
-        text: '语言学习',
-        ariaLabel: 'Language Menu',
+        text: 'RFC',
+        ariaLabel: '',
         items: [
-            { text: 'Chinese', link: '/language/chinese/' },
-            { text: 'Japanese', link: '/language/japanese/' }
+            { text: 'WebSocket协议', link: '/rfc/rfc6455' }
         ]
     }
 ]
