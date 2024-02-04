@@ -5636,25 +5636,7 @@ client.shutdownAsync();
 | BITCOUNT | RBitSet.<br />cardinality()<br />cardinalityAsync() | RBitSetReactive.<br />cardinality() | RBitSetRx.<br />cardinality() |
 | BITOP | RBitSet.<br />or()<br />and()<br />xor()<br />orAsync()<br />andAsync()<br />xorAsync() | RBitSetReactive.<br />or()<br />and()<br />xor() | RBitSetRx.<br />or()<br />and()<br />xor() |
 | BITPOS | RBitSet.<br />length()<br />lengthAsync() | RBitSetReactive.<br />length() | RBitSetRx.<br />length() |
-| BITFIELD | RBitSet.<br />getByte()<br />setByte()<br />incrementAndGetByte()
-
-getShort()<br />setShort()<br />incrementAndGetShort()
-
-getInteger()<br />setInteger()<br />incrementAndGetInteger()
-
-getLong()<br />setLong()<br />incrementAndGetLong() | RBitSetReactive.<br />getByte()<br />setByte()<br />incrementAndGetByte()
-
-getShort()<br />setShort()<br />incrementAndGetShort()
-
-getInteger()<br />setInteger()<br />incrementAndGetInteger()
-
-getLong()<br />setLong()<br />incrementAndGetLong() | RBitSetRx.<br />getByte()<br />setByte()<br />incrementAndGetByte()
-
-getShort()<br />setShort()<br />incrementAndGetShort()
-
-getInteger()<br />setInteger()<br />incrementAndGetInteger()
-
-getLong()<br />setLong()<br />incrementAndGetLong() |
+| BITFIELD | RBitSet.<br />getByte()<br />setByte()<br />incrementAndGetByte()<br /><br />getShort()<br />setShort()<br />incrementAndGetShort()<br /><br />getInteger()<br />setInteger()<br />incrementAndGetInteger()<br /><br />getLong()<br />setLong()<br />incrementAndGetLong() | RBitSetReactive.<br />getByte()<br />setByte()<br />incrementAndGetByte()<br /><br />getShort()<br />setShort()<br />incrementAndGetShort()<br /><br />getInteger()<br />setInteger()<br />incrementAndGetInteger()<br /><br />getLong()<br />setLong()<br />incrementAndGetLong() | RBitSetRx.<br />getByte()<br />setByte()<br />incrementAndGetByte()<br /><br />getShort()<br />setShort()<br />incrementAndGetShort()<br /><br />getInteger()<br />setInteger()<br />incrementAndGetInteger()<br /><br />getLong()<br />setLong()<br />incrementAndGetLong() |
 | BLMPOP | RBlockingQueue.<br />pollLastFromAny()<br />pollFirstFromAny()<br />pollLastFromAnyAsync()<br />pollFirstFromAnyAsync() | RBlockingQueueReactive.<br />pollLastFromAny()<br />pollFirstFromAny() | RBlockingQueueRx.<br />pollLastFromAny()<br />pollFirstFromAny() |
 | BLPOP | RBlockingQueue.<br />take()<br />poll()<br />pollFromAny()<br />takeAsync()<br />pollAsync()<br />pollFromAnyAsync() | RBlockingQueueReactive.<br />take()<br />poll()<br />pollFromAny() | RBlockingQueueRx.<br />take()<br />poll()<br />pollFromAny() |
 | BLMOVE | RBlockingDeque.<br />move()<br />moveAsync() | RBlockingDequeReactive.<br />move() | RBlockingDequeRx.<br />move() |
@@ -5672,13 +5654,7 @@ getLong()<br />setLong()<br />incrementAndGetLong() |
 | DUMP | RObject.<br />dump()<br />dumpAsync() | RObjectReactive.<br />dump() | RObjectRx.<br />dump() |
 | DBSIZE | RKeys.<br />count()<br />countAsync() | RKeysReactive.<br />count() | RKeysRx.count() |
 | DECR | RAtomicLong.<br />decrementAndGet()<br />decrementAndGetAsync() | RAtomicLongReactive.<br />decrementAndGet() | RAtomicLongRx.<br />decrementAndGet() |
-| DEL | RObject.<br />delete()<br />deleteAsync()
-
-RKeys.<br />delete()<br />deleteAsync() | RObjectReactive.<br />delete()
-
-RKeysReactive.<br />delete() | RObjectRx.<br />delete()
-
-RKeysRx.<br />delete() |
+| DEL | RObject.<br />delete()<br />deleteAsync()<br /><br />RKeys.<br />delete()<br />deleteAsync() | RObjectReactive.<br />delete()<br /><br />RKeysReactive.<br />delete() | RObjectRx.<br />delete()<br /><br />RKeysRx.<br />delete() |
 | STRLEN | RBucket.<br />size()<br />sizeAsync() | RBucketReactive.<br />size() | RBucketRx.<br />size() |
 | EVAL | RScript.<br />eval()<br />evalAsync() | RScriptReactive.<br />eval() | RScriptRx.<br />eval() |
 | EVALSHA | RScript.<br />evalSha()<br />evalShaAsync() | RScriptReactive.<br />evalSha() | RScriptRx.<br />evalSha() |
@@ -5694,28 +5670,10 @@ RKeysRx.<br />delete() |
 | GEORADIUS | RGeo.<br />radius()<br />radiusAsync()<br />radiusWithDistance()<br />radiusWithDistanceAsync()<br />radiusWithPosition()<br />radiusWithPositionAsync() | RGeoReactive.<br />radius()<br />radiusWithDistance()<br />radiusWithPosition() | RGeoRx.<br />radius()<br />radiusWithDistance()<br />radiusWithPosition() |
 | GEOSEARCH | RGeo.<br />search()<br />searchAsync() | RGeoReactive.<br />search() | RGeoRx.<br />search() |
 | GEOSEARCHSTORE | RGeo.<br />storeSearchTo()<br />storeSearchToAsync() | RGeoReactive.<br />storeSearchTo() | RGeoRx.<br />storeSearchTo() |
-| GET | RBucket.<br />get()<br />getAsync()
-
-RBinaryStream.<br />get()<br />getAsync() | RBucketReactive.<br />get()
-
-RBinaryStreamReactive.<br />get() | RBucketRx.<br />get()
-
-RBinaryStreamRx.<br />get() |
+| GET | RBucket.<br />get()<br />getAsync()<br /><br />RBinaryStream.<br />get()<br />getAsync() | RBucketReactive.<br />get()<br /><br />RBinaryStreamReactive.<br />get() | RBucketRx.<br />get()<br /><br />RBinaryStreamRx.<br />get() |
 | GETEX | RBucket.<br />getAndExpire()<br />getAndExpireAsync()<br />getAndClearExpire()<br />getAndClearExpireAsync() | RBucketReactive.<br />getAndExpire()<br />getAndClearExpire() | RBucketRx.<br />getAndExpire()<br />getAndClearExpire() |
 | GETBIT | RBitSet.<br />get()<br />getAsync() | RBitSetReactive.<br />get() | RBitSetRx.<br />get() |
-| GETSET | RBucket.<br />getAndSet()<br />getAndSetAsync()
-
-RAtomicLong.<br />getAndSet()<br />getAndSetAsync()
-
-RAtomicDouble.<br />getAndSet()<br />getAndSetAsync() | RBucketReactive.<br />getAndSet()
-
-RAtomicLongReactive.<br />getAndSet()
-
-RAtomicDoubleReactive.<br />getAndSet() | RBucketRx.<br />getAndSet()
-
-RAtomicLongRx.<br />getAndSet()
-
-RAtomicDoubleRx.<br />getAndSet() |
+| GETSET | RBucket.<br />getAndSet()<br />getAndSetAsync()<br /><br />RAtomicLong.<br />getAndSet()<br />getAndSetAsync()<br /><br />RAtomicDouble.<br />getAndSet()<br />getAndSetAsync() | RBucketReactive.<br />getAndSet()<br /><br />RAtomicLongReactive.<br />getAndSet()<br /><br />RAtomicDoubleReactive.<br />getAndSet() | RBucketRx.<br />getAndSet()<br /><br />RAtomicLongRx.<br />getAndSet()<br /><br />RAtomicDoubleRx.<br />getAndSet() |
 | HDEL | RMap.<br />fastRemove()<br />fastRemoveAsync() | RMapReactive.<br />fastRemove() | RMapRx.<br />fastRemove() |
 | HEXISTS | RMap.<br />containsKey()<br />containsKeyAsync() | RMapReactive.<br />containsKey() | RMapRx.<br />containsKey() |
 | HGET | RMap.<br />get()<br />getAsync() | RMapReactive.<br />get() | RMapRx.<br />get() |
@@ -5773,11 +5731,7 @@ RAtomicDoubleRx.<br />getAndSet() |
 | PEXPIRE | RExpirable.<br />expire()<br />expireAsync() | RExpirableReactive.<br />expire() | RExpirableRx.<br />expire() |
 | PEXPIREAT | RExpirable.<br />expireAt()<br />expireAtAsync() | RExpirableReactive.<br />expireAt() | RExpirableRx.<br />expireAt() |
 | PEXPIRETIME | RExpirable.<br />expireTime()<br />expireTimeAsync() | RExpirableReactive.<br />expireTime() | RExpirableRx.<br />expireTime() |
-| PFADD | RHyperLogLog.<br />add()<br />addAsync()<br />addAll()<br />addAllAsync() | RHyperLogLogReactive.<br />add()
-
-addAll() | RHyperLogLogRx.<br />add()
-
-addAll() |
+| PFADD | RHyperLogLog.<br />add()<br />addAsync()<br />addAll()<br />addAllAsync() | RHyperLogLogReactive.<br />add()<br /><br />addAll() | RHyperLogLogRx.<br />add()<br /><br />addAll() |
 | PFCOUNT | RHyperLogLog.<br />count()<br />countAsync()<br />countWith()<br />countWithAsync() | RHyperLogLogReactive.<br />count()<br />countWith() | RHyperLogLogRx.<br />count()<br />countWith() |
 | PFMERGE | RHyperLogLog.<br />mergeWith()<br />mergeWithAsync() | RHyperLogLogReactive.<br />mergeWith() | RHyperLogLogRx.<br />mergeWith() |
 | PING | Node.ping()<br />NodesGroup.pingAll() | - | - |
