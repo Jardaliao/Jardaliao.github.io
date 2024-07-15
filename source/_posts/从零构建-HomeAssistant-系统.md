@@ -26,6 +26,14 @@ sudo scripts/enter.sh make rpi4_64
 
 ![image-20240712181325228](从零构建-HomeAssistant-系统/image-20240712181325228.png)
 
+构建需要几十分钟，构建输出在``./output``，镜像在``./output/images/``。
+
+上面说到 HA 使用 Docker 构建系统，那构建结果为什么在宿主机上呢？原因是``enter.sh``将容器内的``/build``挂载到了宿主机的``${pwd}``。
+
+想进构建的容器里看看怎么办？``sudo scripts/enter.sh``就行。
+
+
+
 
 
 # 参考
