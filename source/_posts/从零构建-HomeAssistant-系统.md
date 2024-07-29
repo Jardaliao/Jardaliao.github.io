@@ -4,7 +4,7 @@ date: 2024-07-12 17:34:53
 tags:
 ---
 
-HA (Home Assistan) 主要有三个重要的部分：
+HA (Home Assistant) 主要有三个重要的部分：
 
 - Operating System - 提供了最基本的 Linux 环境来运行 Supervisor 和 Core
 - Supervisor - 管理操作系统
@@ -80,6 +80,14 @@ sudo qemu-system-x86_64 \
 
 看见 `ha >` 标识符代表 HAOS 启动成功，此时访问 `http://homeassistant.local:8123/` 即可使用 HA。
 
+> 一路安装下来没有设置用户名密码，Web UI 也没有提供注册入口，我们需要进入容器通过命令设置。
+>
+> ~~ha> login~~
+>
+> ~~#docker exec -it homeassistant sh~~
+>
+> ok没找到怎么添加用户
+
 `info` 查看 HA 的版本信息：
 
 ![image-20240725142645261](从零构建-HomeAssistant-系统/image-20240725142645261-1721888806633-5.png)
@@ -89,6 +97,29 @@ sudo qemu-system-x86_64 \
 ![image-20240725142257228](从零构建-HomeAssistant-系统/image-20240725142257228-1721888578909-3.png)
 
 
+
+# Operating System
+
+HA 使用A/B分区，分成以下部分：
+
+- Boot - 通常是FAT格式，存放Bootloader
+- Kernel A - 内核A
+- System A - 系统A的 rootfs
+- Kernel B - 内核B
+- System B - 系统B的 rootfs
+- Bootstate - 用于记录当前激活的内核版本
+- Overlay - 不懂
+- Data - 用户数据分区
+
+
+
+
+
+# Core
+
+
+
+# Supervisor
 
 
 
